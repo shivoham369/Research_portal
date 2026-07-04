@@ -12,7 +12,8 @@ import {
   Youtube,
   ArrowRight,
   Mail,
-  ChevronRight
+  ChevronRight,
+  Bell
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -77,7 +78,18 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground">AnC, IIT Kanpur</p>
               </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              {/* International Internship Notification */}
+              <Link href="/international-internships">
+                <Button className="relative flex items-center gap-2 bg-gradient-to-r from-rose-500 to-orange-500 hover:from-rose-600 hover:to-orange-600 text-white text-base font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
+                  </span>
+                  International Internships
+                </Button>
+              </Link>
+
               <Link href="/portal">
                 <Button className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 group">
                   Go to Research Portal
@@ -85,6 +97,8 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+              
+           
           </nav>
         </div>
       </header>
